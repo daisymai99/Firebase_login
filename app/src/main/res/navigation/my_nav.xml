@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/splash">
+
+    <activity
+        android:id="@+id/signIn"
+        android:name="com.example.myapplication.SignIn"
+        android:label="activity_sign_in"
+        tools:layout="@layout/activity_sign_in" >
+        <action
+            android:id="@+id/action_signIn_to_mainActivity"
+            app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_signIn_to_forget_pass"
+            app:destination="@id/forget_pass" />
+        <action
+            android:id="@+id/action_signIn_to_signUp"
+            app:destination="@id/signUp" />
+    </activity>
+    <activity
+        android:id="@+id/splash"
+        android:name="com.example.myapplication.Splash"
+        android:label="activity_splash"
+        tools:layout="@layout/activity_splash" >
+        <action
+            android:id="@+id/action_splash_to_my_nav2"
+            app:destination="@id/my_nav" />
+    </activity>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.myapplication.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_mainActivity_to_webActivity"
+            app:destination="@id/webActivity" />
+    </activity>
+    <activity
+        android:id="@+id/forget_pass"
+        android:name="com.example.myapplication.Forget_pass"
+        android:label="activity_forget_pass"
+        tools:layout="@layout/activity_forget_pass" >
+        <action
+            android:id="@+id/action_forget_pass_to_code_verification"
+            app:destination="@id/code_verification" />
+    </activity>
+    <activity
+        android:id="@+id/code_verification"
+        android:name="com.example.myapplication.Code_verification"
+        android:label="activity_code_verification"
+        tools:layout="@layout/activity_code_verification" >
+        <action
+            android:id="@+id/action_code_verification_to_update_password"
+            app:destination="@id/update_password" />
+    </activity>
+    <activity
+        android:id="@+id/update_password"
+        android:name="com.example.myapplication.Update_password"
+        android:label="activity_update_password"
+        tools:layout="@layout/activity_update_password" >
+        <action
+            android:id="@+id/action_update_password_to_signIn"
+            app:destination="@id/signIn" />
+    </activity>
+    <activity
+        android:id="@+id/signUp"
+        android:name="com.example.myapplication.SignUp"
+        android:label="activity_sign_up"
+        tools:layout="@layout/activity_sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_signIn"
+            app:destination="@id/signIn" />
+    </activity>
+    <activity
+        android:id="@+id/webActivity"
+        android:name="com.example.myapplication.WebActivity"
+        android:label="activity_webview"
+        tools:layout="@layout/activity_webview" >
+        <action
+            android:id="@+id/action_webActivity_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </activity>
+</navigation>

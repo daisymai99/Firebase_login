@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="signUp">Dont have an account? <a href="#">Sign Up</a></string>
+    <string name="forget">  <a href="#">Forget password</a>       </string>
+
+    <string name="signIn">Already have an account? <a href="#">Sign In</a></string>
+
+
+</resources>

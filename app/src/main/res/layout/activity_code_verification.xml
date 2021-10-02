@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Code_verification"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/Exit"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:src="@drawable/clear"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CO"
+                android:textSize="65sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DE"
+                android:textSize="65sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VERIFICATION"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_marginTop="80sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please enter a code has sent on your phone"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+                <com.mukesh.OtpView
+                    android:id="@+id/otpView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:inputType="number"
+                    app:OtpLineColor="@color/black"
+                    app:OtpViewType="rectangle"
+                    app:OtpItemCount="6"
+                    app:OtpItemHeight="50dp"
+                    android:cursorVisible="true"
+                    app:OtpItemRadius="5dp"
+                    style="@style/OtpWidget.OtpView"
+                    app:OtpHideLineWhenFilled="true"/>
+
+
+                <TextView
+                    android:id="@+id/resendOTP"
+                    android:clickable="true"
+                    android:layout_marginTop="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resend Otp"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:text="Continue"
+                android:clickable="true"
+                android:background="@color/blue"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
